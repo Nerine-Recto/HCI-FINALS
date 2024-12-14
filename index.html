@@ -13,31 +13,40 @@
     <header>
         <h1 class="app-title">VisionEase</h1>
         <p class="app-tagline">Empowering visually impaired users with accessible web tools and features</p>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
     </header>
     <main id="main-content" class="main-content">
-        <h2>Our Accessibility Features</h2>
-        <div class="feature-grid">
-            <article class="feature-card">
-                <i class="fas fa-universal-access" aria-hidden="true"></i>
-                <h3>Interactive Accessibility Demo</h3>
-                <p>Experience and understand various visual impairments through our interactive simulations. Test how different accessibility features can improve user experience.</p>
-            </article>
-            <article class="feature-card">
-                <i class="fas fa-volume-up" aria-hidden="true"></i>
-                <h3>Text-to-Speech</h3>
-                <p>Convert any text into spoken words. Adjust speech rate and volume to suit your preferences, making written content accessible to those with visual impairments or reading difficulties.</p>
-            </article>
-            <article class="feature-card">
-                <i class="fas fa-adjust" aria-hidden="true"></i>
-                <h3>Color Contrast Analyzer</h3>
-                <p>Ensure your color choices meet accessibility standards. Our tool helps you check and improve the readability of your text against various background colors.</p>
-            </article>
-            <article class="feature-card">
-                <i class="fas fa-font" aria-hidden="true"></i>
-                <h3>Font Legibility Tester</h3>
-                <p>Experiment with different fonts and sizes to find the most readable combination. Improve the legibility of your content for all users, especially those with visual impairments.</p>
-            </article>
-        </div>
+        <section id="features">
+            <h2>Our Accessibility Features</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <i class="fas fa-universal-access" aria-hidden="true"></i>
+                    <h3>Interactive Accessibility Demo</h3>
+                    <p>Experience and understand various visual impairments through our interactive simulations. Test how different accessibility features can improve user experience.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                    <h3>Text-to-Speech</h3>
+                    <p>Convert any text into spoken words. Adjust speech rate and volume to suit your preferences, making written content accessible to those with visual impairments or reading difficulties.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                    <h3>Color Contrast Analyzer</h3>
+                    <p>Ensure your color choices meet accessibility standards. Our tool helps you check and improve the readability of your text against various background colors.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-font" aria-hidden="true"></i>
+                    <h3>Font Legibility Tester</h3>
+                    <p>Experiment with different fonts and sizes to find the most readable combination. Improve the legibility of your content for all users, especially those with visual impairments.</p>
+                </article>
+            </div>
+        </section>
         <section class="tool-demo" aria-labelledby="tool-demo-heading">
             <h2 id="tool-demo-heading">Interactive Accessibility Demo</h2>
             <div class="controls">
@@ -61,6 +70,7 @@
             </div>
             <button class="button" onclick="analyzeContrast()">Analyze Contrast</button>
             <div id="contrast-result" aria-live="polite"></div>
+            <button class="button share-button" onclick="shareContrastResult()">Share Result</button>
         </section>
         <section class="font-tester" aria-labelledby="font-heading">
             <h2 id="font-heading">Font Legibility Tester</h2>
@@ -74,23 +84,44 @@
             <input type="range" id="font-size-test" min="12" max="32" value="16">
             <p id="font-test-text">The quick brown fox jumps over the lazy dog.</p>
         </section>
+        <section id="community" class="community">
+            <h2>Community Forum</h2>
+            <div class="forum-posts">
+                <p>Forum posts will appear here.</p>
+            </div>
+            <form id="forum-post-form">
+                <textarea id="forum-post-content" placeholder="Share your accessibility tips or ask for advice"></textarea>
+                <button type="submit" class="button">Post</button>
+            </form>
+        </section>
+        <section id="feedback" class="feedback">
+            <h2>Your Feedback</h2>
+            <p>How do you feel about VisionEase? Your feedback helps us improve!</p>
+            <div class="emoji-feedback">
+                <button class="emoji-button" onclick="submitFeedback('😃')">😃</button>
+                <button class="emoji-button" onclick="submitFeedback('🙂')">🙂</button>
+                <button class="emoji-button" onclick="submitFeedback('😐')">😐</button>
+                <button class="emoji-button" onclick="submitFeedback('🙁')">🙁</button>
+                <button class="emoji-button" onclick="submitFeedback('😢')">😢</button>
+            </div>
+        </section>
+        <aside class="accessibility-menu" aria-label="Accessibility Settings">
+            <h2>Customize Your Accessibility Settings</h2>
+            <div class="tool-option">
+                <label for="font-size">Text Size</label>
+                <input type="range" id="font-size" min="12" max="24" value="16" aria-valuemin="12" aria-valuemax="24" aria-valuenow="16">
+            </div>
+            <div class="tool-option">
+                <label for="contrast">Contrast</label>
+                <input type="range" id="contrast" min="1" max="3" step="0.1" value="1" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+            </div>
+            <div class="tool-option">
+                <label for="speech-rate">Speech Rate</label>
+                <input type="range" id="speech-rate" min="0.5" max="2" step="0.1" value="1" aria-valuemin="0.5" aria-valuemax="2" aria-valuenow="1">
+            </div>
+            <button class="button" onclick="resetAccessibility()">Reset Settings</button>
+        </aside>
     </main>
-    <aside class="accessibility-menu" aria-label="Accessibility Settings">
-        <h2>Customize Your Accessibility Settings</h2>
-        <div class="tool-option">
-            <label for="font-size">Text Size</label>
-            <input type="range" id="font-size" min="12" max="24" value="16" aria-valuemin="12" aria-valuemax="24" aria-valuenow="16">
-        </div>
-        <div class="tool-option">
-            <label for="contrast">Contrast</label>
-            <input type="range" id="contrast" min="1" max="3" step="0.1" value="1" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
-        </div>
-        <div class="tool-option">
-            <label for="speech-rate">Speech Rate</label>
-            <input type="range" id="speech-rate" min="0.5" max="2" step="0.1" value="1" aria-valuemin="0.5" aria-valuemax="2" aria-valuenow="1">
-        </div>
-        <button class="button" onclick="resetAccessibility()">Reset Settings</button>
-    </aside>
     <div class="audio-controls">
         <button class="button" onclick="toggleSound()">Toggle Sound</button>
         <div class="form-control">
@@ -98,6 +129,7 @@
             <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0.5">
         </div>
     </div>
+    <div id="toast" class="toast" role="alert" aria-live="polite"></div>
     <script src="script.js"></script>
 </body>
 </html>
