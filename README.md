@@ -21,4 +21,47 @@ VisionEase offers four main features:
 VisionEase is a web-based application that doesn't require installation. To set up the project locally for development:
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/visionease.git
+
+2. Navigate to the project directory:
+   ```bash
+   cd visionease
+
+3. Install the required dependencies:
+   ```bash
+   npm install
+
+4. Start the development server:
+   ```bash
+   npm start
+
+The application will be available at http://localhost:3000 in your browser.
+
+Usage:
+**Interactive Accessibility Demo:**
+- Navigate to the "Simulations" section in the menu.
+- Select a visual impairment to simulate (e.g., color blindness, low vision, etc.).
+- Adjust simulation settings to explore the user experience under different conditions.
+
+**Text-to-Speech:**
+- Highlight any text on the webpage.
+- Click the "Text-to-Speech" button or press the designated keyboard shortcut.
+- Adjust speech rate and volume using the slider controls.
+
+**Color Contrast Analyzer:**
+- Open the "Contrast Analyzer" tool.
+- Enter text and background colors in HEX format, or use the color picker.
+- The tool will display a contrast ratio and indicate whether it meets WCAG standards (AA or AAA).
+
+**Font Legibility Tester:**
+- Go to the "Font Tester" section.
+- Enter sample text, and select various font styles, sizes, and weights from the dropdown menus.
+- The tool will highlight the most readable options and provide recommendations.
+
+**Technologies Used**
+VisionEase is built with modern web technologies to ensure a seamless and responsive experience:
+
+Frontend: HTML5, CSS3
+Accessibility Standards: WCAG (Web Content Accessibility Guidelines)
 
