@@ -38,7 +38,7 @@ VisionEase is a web-based application that doesn't require installation. To set 
 
 The application will be available at http://localhost:3000 in your browser.
 
-Usage:
+**Usage:**
 **Interactive Accessibility Demo:**
 - Navigate to the "Simulations" section in the menu.
 - Select a visual impairment to simulate (e.g., color blindness, low vision, etc.).
@@ -65,3 +65,5 @@ VisionEase is built with modern web technologies to ensure a seamless and respon
 Frontend: HTML5, CSS3
 Accessibility Standards: WCAG (Web Content Accessibility Guidelines)
 
+**License**
+VisionEase is licensed under the MIT License. See the LICENSE file for more details.
